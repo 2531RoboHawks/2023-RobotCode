@@ -41,6 +41,9 @@ public class WristManual extends CommandBase {
     wAxis = (Math.abs(wAxis) < Constants.stickDeadband) ? 0 : wAxis;
 
     armSubsystem.setSpeeds(0,0, 0.1*wAxis);
+
+    SmartDashboard.putNumber("Wrist Angle: ", armSubsystem.getShoulderAngle()); //Puts the shoulder angle on the SmartDashboard
+
   }
 
   // Called once the command ends or is interrupted.
