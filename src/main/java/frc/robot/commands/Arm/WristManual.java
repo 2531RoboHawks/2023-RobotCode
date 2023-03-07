@@ -91,6 +91,9 @@ public class WristManual extends CommandBase {
     armSubsystem.setSpeeds(0,0, 0.1*wAxis);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 83f76de (Merge branch 'AH-Duluth' of https://github.com/2531RoboHawks/2023-RobotCode into AH-Duluth)
+=======
 >>>>>>> parent of 83f76de (Merge branch 'AH-Duluth' of https://github.com/2531RoboHawks/2023-RobotCode into AH-Duluth)
 =======
 >>>>>>> parent of 83f76de (Merge branch 'AH-Duluth' of https://github.com/2531RoboHawks/2023-RobotCode into AH-Duluth)
