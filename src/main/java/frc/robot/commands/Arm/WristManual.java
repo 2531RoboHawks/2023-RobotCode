@@ -22,7 +22,7 @@ public class WristManual extends CommandBase {
   private final PIDController elbowPIDController;
 
   /** Creates a new WristManual. */
-  public WristManual(ArmSubsystem m_armSubsystem, Joystick controller, int wristAxis) {
+  public WristManual(ArmSubsystem m_armSubsystem, Joystick controller, int shoulderAxis, int elbowAxis, int wristAxis) {
     // Use addRequirements() here to declare subsystem dependencies.
     this.m_armSubsystem = m_armSubsystem;
     addRequirements(m_armSubsystem);

@@ -119,12 +119,12 @@ public class RobotContainer {
     armDownAndOut.onTrue(armLow);
     armStore.onTrue(armStow);
     armMiddle.onTrue(armMid);
-    wristManualActivator.onTrue(new WristManual(armSubsystem, arm, wristAxis));
+    wristManualActivator.onTrue(new WristManual(armSubsystem, arm, 0, 0, wristAxis));
 
     //Gripper Buttons
     gripperOpen.onTrue(greasyGripper9000Open);
     gripperClose.onTrue(greasyGripper9000Close);
-    gripperManualActivator.whileTrue(new ManualGripper(armSubsystem, arm, gripperAxis, 0, 0));
+    gripperManualActivator.whileTrue(new ManualGripper(armSubsystem, arm, gripperAxis, 0, 0, 0));
 
     //Debug Buttons
     motorRelease.onTrue(new InstantCommand(() -> armSubsystem.releaseAllMotors()));
