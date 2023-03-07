@@ -82,10 +82,14 @@ public class WristManual extends CommandBase {
     wAxis = (Math.abs(wAxis) < Constants.stickDeadband) ? 0 : wAxis;
     //eAxis = (Math.abs(wAxis) < Constants.stickDeadband) ? 0 : eAxis;
 
+<<<<<<< HEAD
     m_armSubsystem.setSpeeds(shoulderSpeed, elbowSpeed, 0.1*wAxis);
 
     SmartDashboard.putNumber("Wrist Angle: ", m_armSubsystem.getShoulderAngle()); //Puts the shoulder angle on the SmartDashboard
 
+=======
+    armSubsystem.setSpeeds(0,0, 0.1*wAxis);
+>>>>>>> parent of 83f76de (Merge branch 'AH-Duluth' of https://github.com/2531RoboHawks/2023-RobotCode into AH-Duluth)
   }
 
   // Called once the command ends or is interrupted.
