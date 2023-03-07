@@ -25,15 +25,15 @@ public class ArmMid extends CommandBase  {
 
           this.shoulderPIDController = new PIDController(Arm.shoulderKP, Arm.shoulderKI, Arm.shoulderKD); //Input the PID values for the shoulder
           shoulderPIDController.setTolerance(2); //Sets the tolerance of the shoulder PID Controller
-          shoulderPIDController.setSetpoint(Arm.shoulderMidPosition); //Sets the setpoint of the shoulder PID Controller to the Midium position
+          shoulderPIDController.setSetpoint(Arm.shoulderMidPosition); //Sets the setpoint of the shoulder PID Controller to the Mid position
 
           this.elbowPIDController = new PIDController(Arm.elbowKP, Arm.elbowKI, Arm.elbowKD); //Input the PID values for the elbow
           elbowPIDController.setTolerance(2); //Sets the tolerance of the elbow PID Controller
-          elbowPIDController.setSetpoint(Arm.elbowMidPosition); //Sets the setpoint of the elbow PID Controller to the Midium position
+          elbowPIDController.setSetpoint(Arm.elbowMidPosition); //Sets the setpoint of the elbow PID Controller to the Mid position
 
           this.wristPIDController = new PIDController(Arm.wristKP, Arm.wristKI, Arm.wristKD); //Input the PID values for the wrist
           wristPIDController.setTolerance(.5); //Sets the tolerance of the wrist PID Controller
-          wristPIDController.setSetpoint(Arm.wristMidPosition); //Sets the setpoint of the wrist PID Controller to the Midium position
+          wristPIDController.setSetpoint(Arm.wristMidPosition); //Sets the setpoint of the wrist PID Controller to the Mid position
     }
     
 

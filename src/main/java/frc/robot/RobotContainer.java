@@ -46,7 +46,7 @@ public class RobotContainer {
   private final int slowMode = XboxController.Button.kB.value;
   private final JoystickButton autoBalance = new JoystickButton(driver, XboxController.Button.kA.value);
 
-  /*Xbox controller values
+  //Xbox controller values
   //private final JoystickButton armUpAndOut = new JoystickButton(arm, XboxController.Button.kY.value); // Arm up and out
   private final JoystickButton armDownAndOut = new JoystickButton(arm, XboxController.Button.kA.value); // Arm down and out
   private final JoystickButton armStore = new JoystickButton(arm, XboxController.Button.kB.value); // Default position
@@ -57,8 +57,9 @@ public class RobotContainer {
   private final JoystickButton gripperClose = new JoystickButton(arm, XboxController.Button.kRightBumper.value); //Close claw
   private final JoystickButton gripperManualActivator = new JoystickButton(arm, XboxController.Button.kLeftStick.value);
   private final JoystickButton wristManualActivator = new JoystickButton(arm, XboxController.Button.kY.value); //Hold to activate wrist manual
-  */
-  //private final JoystickButton armUpAndOut = new JoystickButton(arm, XboxController.Button.kY.value); // Arm up and out
+  
+  
+  /*//private final JoystickButton armUpAndOut = new JoystickButton(arm, XboxController.Button.kY.value); // Arm up and out
   private final JoystickButton armDownAndOut = new JoystickButton(arm, 2); // Arm down and out
   private final JoystickButton armStore = new JoystickButton(arm, 5); // Default position
   private final JoystickButton armMiddle = new JoystickButton(arm, 4); // Place object in middle row
@@ -68,6 +69,7 @@ public class RobotContainer {
   private final JoystickButton gripperClose = new JoystickButton(arm, XboxController.Button.kRightBumper.value); //Close claw
   private final JoystickButton gripperManualActivator = new JoystickButton(arm, XboxController.Button.kLeftStick.value);
   private final JoystickButton wristManualActivator = new JoystickButton(arm, XboxController.Button.kY.value); //Hold to activate wrist manual
+  */
 
   // Define the Swerve subsystem as swerveSubsystem
   private final Swerve swerveSubsystem = new Swerve();
@@ -117,12 +119,12 @@ public class RobotContainer {
     armDownAndOut.onTrue(armLow);
     armStore.onTrue(armStow);
     armMiddle.onTrue(armMid);
-    wristManualActivator.whileTrue(new WristManual(armSubsystem, arm, wristAxis));
+    wristManualActivator.onTrue(new WristManual(armSubsystem, arm, 0, 0, wristAxis));
 
     //Gripper Buttons
     gripperOpen.onTrue(greasyGripper9000Open);
     gripperClose.onTrue(greasyGripper9000Close);
-    gripperManualActivator.whileTrue(new ManualGripper(armSubsystem, arm, gripperAxis));
+    gripperManualActivator.whileTrue(new ManualGripper(armSubsystem, arm, gripperAxis, 0, 0));
 
     //Debug Buttons
     motorRelease.onTrue(new InstantCommand(() -> armSubsystem.releaseAllMotors()));
@@ -145,7 +147,7 @@ public class RobotContainer {
     autoChooser.addOption("Straight out to Dock with Balance", new SequentialCommandGroup(
       new StraightDockWithAutoBal(swerveSubsystem)));
 
-      autoChooser.addOption("Do absolutly nothing", null);
+    autoChooser.addOption("Do absolutly nothing", null);
 
     SmartDashboard.putData(autoChooser);
   }
