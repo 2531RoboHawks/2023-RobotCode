@@ -119,7 +119,7 @@ public class RobotContainer {
     armDownAndOut.onTrue(armLow);
     armStore.onTrue(armStow);
     armMiddle.onTrue(armMid);
-    wristManualActivator.onTrue(new WristManual(armSubsystem, arm, 0, 0, wristAxis));
+    wristManualActivator.onTrue(new WristManual(armSubsystem, arm, wristAxis));
 
     //Gripper Buttons
     gripperOpen.onTrue(greasyGripper9000Open);
