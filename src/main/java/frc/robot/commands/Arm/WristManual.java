@@ -55,8 +55,13 @@ public class WristManual extends CommandBase {
     double wAxis = controller.getRawAxis(wristAxis);
     
     wAxis = (Math.abs(wAxis) < Constants.stickDeadband) ? 0 : wAxis;
+<<<<<<< HEAD
     m_armSubsystem.setSpeeds(shoulderSpeed, elbowSpeed, 0.1*wAxis);
 
+=======
+
+    armSubsystem.setSpeeds(0,0, 0.1*wAxis);
+>>>>>>> parent of 475bb4c (Update WristManual.java)
   }
 
   // Called once the command ends or is interrupted.
