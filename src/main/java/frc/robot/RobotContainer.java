@@ -48,8 +48,12 @@ public class RobotContainer {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   //Xbox controller values
   //private final JoystickButton armUpAndOut = new JoystickButton(arm, XboxController.Button.kY.value); // Arm up and out
+=======
+  private final JoystickButton armUpAndOut = new JoystickButton(arm, XboxController.Button.kY.value); // Arm up and out
+>>>>>>> parent of 489738f (Final matches and changes)
 =======
   private final JoystickButton armUpAndOut = new JoystickButton(arm, XboxController.Button.kY.value); // Arm up and out
 >>>>>>> parent of 489738f (Final matches and changes)
@@ -63,6 +67,7 @@ public class RobotContainer {
   private final JoystickButton zeroArmEncoders = new JoystickButton(arm, 8); 
   private final JoystickButton gripperOpen = new JoystickButton(arm, XboxController.Button.kLeftBumper.value); //Opens claw
   private final JoystickButton gripperClose = new JoystickButton(arm, XboxController.Button.kRightBumper.value); //Close claw
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   private final JoystickButton gripperManualActivator = new JoystickButton(arm, XboxController.Button.kLeftStick.value);
@@ -80,6 +85,9 @@ public class RobotContainer {
   private final JoystickButton gripperManualActivator = new JoystickButton(arm, XboxController.Button.kLeftStick.value);
   private final JoystickButton wristManualActivator = new JoystickButton(arm, XboxController.Button.kY.value); //Hold to activate wrist manual
   */
+=======
+
+>>>>>>> parent of 489738f (Final matches and changes)
 =======
 
 >>>>>>> parent of 489738f (Final matches and changes)
@@ -137,7 +145,10 @@ public class RobotContainer {
     armMiddle.onTrue(armMid);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     wristManualActivator.onTrue(new WristManual(armSubsystem, arm, 0, 0, wristAxis));
+=======
+>>>>>>> parent of 489738f (Final matches and changes)
 =======
 >>>>>>> parent of 489738f (Final matches and changes)
 =======
@@ -148,7 +159,10 @@ public class RobotContainer {
     gripperClose.onTrue(greasyGripper9000Close);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     gripperManualActivator.whileTrue(new ManualGripper(armSubsystem, arm, gripperAxis, 0, 0, 0));
+=======
+>>>>>>> parent of 489738f (Final matches and changes)
 =======
 >>>>>>> parent of 489738f (Final matches and changes)
 =======
@@ -177,8 +191,11 @@ public class RobotContainer {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     autoChooser.addOption("Do absolutly nothing", null);
 
+=======
+>>>>>>> parent of 489738f (Final matches and changes)
 =======
 >>>>>>> parent of 489738f (Final matches and changes)
 =======
