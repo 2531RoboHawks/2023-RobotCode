@@ -13,7 +13,6 @@ import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.Constants.Swerve.Arm;
-import frc.robot.commands.Arm.WristManual;
 
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
@@ -39,11 +38,19 @@ public final void init() {
 
   //Set open and closed loop ramp rates
   shoulderFalcon.configOpenloopRamp(0);
+<<<<<<< HEAD
   shoulderFalcon.configClosedloopRamp(4);
   elbowMotor.setOpenLoopRampRate(0);
   elbowMotor.setClosedLoopRampRate(3.5);
   wristMotor.setOpenLoopRampRate(0);
   wristMotor.setClosedLoopRampRate(3.5);
+=======
+  shoulderFalcon.configClosedloopRamp(.6);
+  elbowMotor.setOpenLoopRampRate(0);
+  elbowMotor.setClosedLoopRampRate(.5);
+  wristMotor.setOpenLoopRampRate(0);
+  wristMotor.setClosedLoopRampRate(.5);
+>>>>>>> parent of 489738f (Final matches and changes)
   gripperFalcon.configOpenloopRamp(0);
   gripperFalcon.configClosedloopRamp(0);
 
@@ -135,4 +142,9 @@ public void periodic(){
   SmartDashboard.putNumber("Gripper Position: ", getGripperPosition());
   SmartDashboard.putNumber("Wrist Speed: ", WristSpeed);
 }
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> parent of 489738f (Final matches and changes)

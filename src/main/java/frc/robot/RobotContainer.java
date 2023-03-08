@@ -46,15 +46,20 @@ public class RobotContainer {
   private final int slowMode = XboxController.Button.kB.value;
   private final JoystickButton autoBalance = new JoystickButton(driver, XboxController.Button.kA.value);
 
+<<<<<<< HEAD
   //Xbox controller values
   //private final JoystickButton armUpAndOut = new JoystickButton(arm, XboxController.Button.kY.value); // Arm up and out
+=======
+  private final JoystickButton armUpAndOut = new JoystickButton(arm, XboxController.Button.kY.value); // Arm up and out
+>>>>>>> parent of 489738f (Final matches and changes)
   private final JoystickButton armDownAndOut = new JoystickButton(arm, XboxController.Button.kA.value); // Arm down and out
   private final JoystickButton armStore = new JoystickButton(arm, XboxController.Button.kB.value); // Default position
   private final JoystickButton armMiddle = new JoystickButton(arm, XboxController.Button.kX.value); // Place object in middle row
   private final JoystickButton motorRelease = new JoystickButton(arm, 7); //Arm free fall
-  private final JoystickButton zeroArmEncoders = new JoystickButton(arm, 8); //Zero arm encoders
+  private final JoystickButton zeroArmEncoders = new JoystickButton(arm, 8); 
   private final JoystickButton gripperOpen = new JoystickButton(arm, XboxController.Button.kLeftBumper.value); //Opens claw
   private final JoystickButton gripperClose = new JoystickButton(arm, XboxController.Button.kRightBumper.value); //Close claw
+<<<<<<< HEAD
   private final JoystickButton gripperManualActivator = new JoystickButton(arm, XboxController.Button.kLeftStick.value);
   private final JoystickButton wristManualActivator = new JoystickButton(arm, XboxController.Button.kY.value); //Hold to activate wrist manual
   
@@ -70,6 +75,9 @@ public class RobotContainer {
   private final JoystickButton gripperManualActivator = new JoystickButton(arm, XboxController.Button.kLeftStick.value);
   private final JoystickButton wristManualActivator = new JoystickButton(arm, XboxController.Button.kY.value); //Hold to activate wrist manual
   */
+=======
+
+>>>>>>> parent of 489738f (Final matches and changes)
 
   // Define the Swerve subsystem as swerveSubsystem
   private final Swerve swerveSubsystem = new Swerve();
@@ -94,8 +102,8 @@ public class RobotContainer {
     boolean fieldRelative = true; // Do you want field oriented control?
     boolean openLoop = true; 
     swerveSubsystem.setDefaultCommand(new TeleopSwerve(swerveSubsystem, driver, translationAxis, strafeAxis, rotationAxis, fieldRelative, openLoop, slowMode));  //Default command to drive the bot
-
-    
+    armSubsystem.setDefaultCommand(new ManualGripper(armSubsystem, arm, gripperAxis));
+    armSubsystem.setDefaultCommand(new WristManual(armSubsystem, arm, wristAxis));
     // Configure the button bindings
     configureButtonBindings();
 
@@ -115,16 +123,22 @@ public class RobotContainer {
     autoBalance.whileTrue(chargeBalance);
     
     //Arm Buttons
-    //armUpAndOut.onTrue(armHigh);
+    armUpAndOut.onTrue(armHigh);
     armDownAndOut.onTrue(armLow);
     armStore.onTrue(armStow);
     armMiddle.onTrue(armMid);
+<<<<<<< HEAD
     wristManualActivator.onTrue(new WristManual(armSubsystem, arm, 0, 0, wristAxis));
+=======
+>>>>>>> parent of 489738f (Final matches and changes)
 
     //Gripper Buttons
     gripperOpen.onTrue(greasyGripper9000Open);
     gripperClose.onTrue(greasyGripper9000Close);
+<<<<<<< HEAD
     gripperManualActivator.whileTrue(new ManualGripper(armSubsystem, arm, gripperAxis, 0, 0, 0));
+=======
+>>>>>>> parent of 489738f (Final matches and changes)
 
     //Debug Buttons
     motorRelease.onTrue(new InstantCommand(() -> armSubsystem.releaseAllMotors()));
@@ -147,8 +161,11 @@ public class RobotContainer {
     autoChooser.addOption("Straight out to Dock with Balance", new SequentialCommandGroup(
       new StraightDockWithAutoBal(swerveSubsystem)));
 
+<<<<<<< HEAD
     autoChooser.addOption("Do absolutly nothing", null);
 
+=======
+>>>>>>> parent of 489738f (Final matches and changes)
     SmartDashboard.putData(autoChooser);
   }
 
