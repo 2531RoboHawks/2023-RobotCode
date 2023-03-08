@@ -58,6 +58,10 @@ public final void init() {
   elbowMotor.setOpenLoopRampRate(0);
   elbowMotor.setClosedLoopRampRate(.5);
   wristMotor.setOpenLoopRampRate(0);
+  shoulderFalcon.configClosedloopRamp(.6);
+  elbowMotor.setOpenLoopRampRate(0);
+  elbowMotor.setClosedLoopRampRate(.5);
+  wristMotor.setOpenLoopRampRate(0);
   wristMotor.setClosedLoopRampRate(.5);
   gripperFalcon.configOpenloopRamp(0);
   gripperFalcon.configClosedloopRamp(0);
