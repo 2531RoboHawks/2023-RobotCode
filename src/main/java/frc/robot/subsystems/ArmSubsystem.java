@@ -39,11 +39,19 @@ public final void init() {
   //Set open and closed loop ramp rates
   shoulderFalcon.configOpenloopRamp(0);
 <<<<<<< HEAD
+<<<<<<< HEAD
   shoulderFalcon.configClosedloopRamp(4);
   elbowMotor.setOpenLoopRampRate(0);
   elbowMotor.setClosedLoopRampRate(3.5);
   wristMotor.setOpenLoopRampRate(0);
   wristMotor.setClosedLoopRampRate(3.5);
+=======
+  shoulderFalcon.configClosedloopRamp(.6);
+  elbowMotor.setOpenLoopRampRate(0);
+  elbowMotor.setClosedLoopRampRate(.5);
+  wristMotor.setOpenLoopRampRate(0);
+  wristMotor.setClosedLoopRampRate(.5);
+>>>>>>> parent of 489738f (Final matches and changes)
 =======
   shoulderFalcon.configClosedloopRamp(.6);
   elbowMotor.setOpenLoopRampRate(0);
@@ -143,7 +151,12 @@ public void periodic(){
   SmartDashboard.putNumber("Wrist Speed: ", WristSpeed);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> parent of 489738f (Final matches and changes)
 =======
 
 }
