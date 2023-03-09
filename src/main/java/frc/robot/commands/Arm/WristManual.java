@@ -26,6 +26,7 @@ public class WristManual extends CommandBase {
     this.m_armSubsystem = m_armSubsystem;
     addRequirements(m_armSubsystem);
 
+    //Defining variables
     this.wristController = wristController;
     this.ShoulderAxis = shoulderAxis;
     this.ElbowAxis = elbowAxis;
@@ -44,13 +45,12 @@ public class WristManual extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    double eAxis = wristController.getRawAxis(ElbowAxis);
-    double wAxis = wristController.getRawAxis(WristAxis);
+    double wAxis = wristController.getRawAxis(WristAxis); //getting axis on controller for wrist.
 
-    eAxis = (Math.abs(eAxis) < Constants.stickDeadband) ? 0 : eAxis;
+    //Applying deadband
     wAxis = (Math.abs(wAxis) < Constants.stickDeadband) ? 0 : wAxis;
 
-    m_armSubsystem.setSpeeds(0, eAxis, 0.1*wAxis);
+    m_armSubsystem.setSpeeds(0, 0, 0.1*wAxis);
 
   }
 

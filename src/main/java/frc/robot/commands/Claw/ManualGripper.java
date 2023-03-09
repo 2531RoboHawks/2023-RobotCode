@@ -31,6 +31,7 @@ public class ManualGripper extends CommandBase {
     this.m_armSubsystem = m_armSubsystem;
     addRequirements(m_armSubsystem);
 
+    //Defining variables
     this.gripperController = gripperController;
     this.gripperAxis = gripperAxis;
     //this.ShoulderAxis = shoulderAxis;
@@ -66,7 +67,7 @@ public class ManualGripper extends CommandBase {
     if(gripperPosition <= Arm.gripperOpenPosition+10000 && gripperSpeed < 0) {
       gripperSpeed = 0;
       m_armSubsystem.stopGripper();
-      //System.out.println("Gripper opened all the way!!!!");
+      System.out.println("Gripper opened all the way!!!!");
     }
     //double shoulderSpeed = shoulderPIDController.calculate(m_armSubsystem.getShoulderAngle()); //Gets the angle of the elbow and calculates the error
     double elbowSpeed = elbowPIDController.calculate(m_armSubsystem.getElbowAngle()); //Gets the angle of the elbow and calculates the error

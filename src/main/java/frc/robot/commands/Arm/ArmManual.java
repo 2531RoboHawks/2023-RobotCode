@@ -23,6 +23,7 @@ public class ArmManual extends CommandBase {
     this.armSubsystem = armSubsystem;
     addRequirements(armSubsystem);
 
+    //Defining variables
     this.controller = controller;
     this.shoulderAxis = shoulderAxis;
     this.elbowAxis = elbowAxis;
@@ -38,10 +39,11 @@ public class ArmManual extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    double sAxis = controller.getRawAxis(shoulderAxis);
-    double eAxis = controller.getRawAxis(elbowAxis);
-    double wAxis = controller.getRawAxis(wristAxis);
+    double sAxis = controller.getRawAxis(shoulderAxis); //getting axis on controller for shoulder.
+    double eAxis = controller.getRawAxis(elbowAxis); //getting axis on controller for elbow.
+    double wAxis = controller.getRawAxis(wristAxis); //getting axis on controller for wrist.
 
+    //Applying stick deadband
     sAxis = (Math.abs(sAxis) < Constants.stickDeadband) ? 0 : sAxis; 
     eAxis = (Math.abs(eAxis) < Constants.stickDeadband) ? 0 : eAxis;
     wAxis = (Math.abs(wAxis) < Constants.stickDeadband) ? 0 : wAxis;
