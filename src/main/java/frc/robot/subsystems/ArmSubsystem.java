@@ -38,33 +38,11 @@ public final void init() {
 
   //Set open and closed loop ramp rates
   shoulderFalcon.configOpenloopRamp(0);
-
-  shoulderFalcon.configClosedloopRamp(4);
-  elbowMotor.setOpenLoopRampRate(0);
-  elbowMotor.setClosedLoopRampRate(3.5);
-  wristMotor.setOpenLoopRampRate(0);
-  wristMotor.setClosedLoopRampRate(3.5);
   shoulderFalcon.configClosedloopRamp(.6);
   elbowMotor.setOpenLoopRampRate(0);
   elbowMotor.setClosedLoopRampRate(.5);
   wristMotor.setOpenLoopRampRate(0);
   wristMotor.setClosedLoopRampRate(.5);
-  shoulderFalcon.configClosedloopRamp(.6);
-  elbowMotor.setOpenLoopRampRate(0);
-  elbowMotor.setClosedLoopRampRate(.5);
-  wristMotor.setOpenLoopRampRate(0);
-
-  shoulderFalcon.configClosedloopRamp(.6);
-  elbowMotor.setOpenLoopRampRate(0);
-  elbowMotor.setClosedLoopRampRate(.5);
-  wristMotor.setOpenLoopRampRate(0);
-  shoulderFalcon.configClosedloopRamp(.6);
-  elbowMotor.setOpenLoopRampRate(0);
-  elbowMotor.setClosedLoopRampRate(.5);
-  wristMotor.setOpenLoopRampRate(0);
-  wristMotor.setClosedLoopRampRate(.5);
-  gripperFalcon.configOpenloopRamp(0);
-  gripperFalcon.configClosedloopRamp(0);
 
   //Set the encoder values to read every 30 ms
   elbowMotor.setPeriodicFramePeriod(PeriodicFrame.kStatus2, 60);
