@@ -47,7 +47,6 @@ public class RobotContainer {
   private final JoystickButton autoBalance = new JoystickButton(driver, XboxController.Button.kA.value);
   //Xbox controller values
   //private final JoystickButton armUpAndOut = new JoystickButton(arm, XboxController.Button.kY.value); // Arm up and out
-  private final JoystickButton armUpAndOut = new JoystickButton(arm, XboxController.Button.kY.value); // Arm up and out
   private final JoystickButton armDownAndOut = new JoystickButton(arm, XboxController.Button.kA.value); // Arm down and out
   private final JoystickButton armStore = new JoystickButton(arm, XboxController.Button.kB.value); // Default position
   private final JoystickButton armMiddle = new JoystickButton(arm, XboxController.Button.kX.value); // Place object in middle row
