@@ -96,7 +96,7 @@ public class RobotContainer {
     autoBalance.whileTrue(chargeBalance);
     
     //Arm Buttons
-    armUpAndOut.onTrue(armHigh);
+    //armUpAndOut.onTrue(armHigh);
     armDownAndOut.onTrue(armLow);
     armStore.onTrue(armStow);
     armMiddle.onTrue(armMid);
