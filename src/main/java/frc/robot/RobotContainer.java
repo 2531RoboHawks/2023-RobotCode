@@ -54,17 +54,21 @@ public class RobotContainer {
   private final JoystickButton zeroArmEncoders = new JoystickButton(arm, 8); 
   private final JoystickButton gripperOpen = new JoystickButton(arm, XboxController.Button.kLeftBumper.value); //Opens claw
   private final JoystickButton gripperClose = new JoystickButton(arm, XboxController.Button.kRightBumper.value); //Close claw
+  private final JoystickButton wristManualActivator = new JoystickButton(arm, XboxController.Button.kY.value);
+  private final JoystickButton gripperManualActivator = new JoystickButton(arm, XboxController.Button.kLeftStick.value);
 
   private final Swerve swerveSubsystem = new Swerve();
   private final ArmSubsystem armSubsystem = new ArmSubsystem();
   private final ArmHigh armHigh = new ArmHigh(armSubsystem);
   private final ArmLow armLow = new ArmLow(armSubsystem);
   private final PutThoseGrippersAway armStow = new PutThoseGrippersAway(armSubsystem);
+  private final WristManual wristManual = new WristManual(armSubsystem, arm, 0, 0, wristAxis);
   private final ArmMid armMid = new ArmMid(armSubsystem);
   private final ChargeBalance chargeBalance = new ChargeBalance(swerveSubsystem);
 
   private final GripperOpen greasyGripper9000Open = new GripperOpen(armSubsystem);
   private final GripperClose greasyGripper9000Close = new GripperClose(armSubsystem);
+  private final ManualGripper manualGripper = new ManualGripper(armSubsystem, arm, gripperAxis, 0, 0);
 
 
       /* Autonomous Mode Chooser */
@@ -100,10 +104,12 @@ public class RobotContainer {
     armDownAndOut.onTrue(armLow);
     armStore.onTrue(armStow);
     armMiddle.onTrue(armMid);
+    wristManualActivator.whileTrue(wristManual);
 
     //Gripper Buttons
     gripperOpen.onTrue(greasyGripper9000Open);
     gripperClose.onTrue(greasyGripper9000Close);
+    gripperManualActivator.whileTrue(manualGripper);
 
     //Debug Buttons
     motorRelease.onTrue(new InstantCommand(() -> armSubsystem.releaseAllMotors()));
