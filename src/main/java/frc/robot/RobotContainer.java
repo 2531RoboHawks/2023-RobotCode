@@ -78,8 +78,6 @@ public class RobotContainer {
     boolean fieldRelative = true; // Do you want field oriented control?
     boolean openLoop = true; 
     swerveSubsystem.setDefaultCommand(new TeleopSwerve(swerveSubsystem, driver, translationAxis, strafeAxis, rotationAxis, fieldRelative, openLoop, slowMode));  //Default command to drive the bot
-    armSubsystem.setDefaultCommand(new ManualGripper(armSubsystem, arm, gripperAxis));
-    armSubsystem.setDefaultCommand(new WristManual(armSubsystem, arm, wristAxis));
     // Configure the button bindings
     configureButtonBindings();
 
