@@ -37,13 +37,13 @@ public class WristManual extends CommandBase {
 
   // Called when the command is initially scheduled.
   @Override
-  public void initialize() {}
+  public void initialize() {
+     elbowPIDController.setSetpoint(m_armSubsystem.getElbowAngle()); //Sets the setpoint of the elbow PID Controller to the current position
+}
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    elbowPIDController.setSetpoint(m_armSubsystem.getElbowAngle()); //Sets the setpoint of the elbow PID Controller to the current position
-    
     double eAxis = wristController.getRawAxis(ElbowAxis);
     double wAxis = wristController.getRawAxis(WristAxis);
 
